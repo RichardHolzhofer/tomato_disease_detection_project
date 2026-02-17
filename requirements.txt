@@ -1,0 +1,11 @@
+kagglehub
+torch
+torchvision
+torchsummary
+torchmetrics
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+mlflow
