@@ -1,3 +1,6 @@
+# Core dependencies. For portability use PyPI wheels (CPU or auto-selected CUDA).
+# If you need an exact CUDA build, replace the torch/torchvision lines
+# with the appropriate wheel URLs (see PyTorch download page for your OS/Python/CUDA).
 kagglehub
 torch
 torchvision
