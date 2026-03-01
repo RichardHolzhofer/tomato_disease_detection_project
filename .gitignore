@@ -2,3 +2,5 @@ venv/
 mlruns/
 mlflow.db
 models/
+./dvc
+

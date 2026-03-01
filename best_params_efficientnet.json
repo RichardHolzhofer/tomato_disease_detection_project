@@ -1,0 +1,9 @@
+{
+    "model_type": "efficientnet",
+    "best_val_f1": 0.9856276361763602,
+    "best_params": {
+        "lr": 0.00010058514085877587,
+        "weight_decay": 9.663133494913435e-05,
+        "dropout": 0.20090248994381077
+    }
+}
