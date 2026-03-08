@@ -1,6 +1,6 @@
-venv/
+.venv/
 mlruns/
 mlflow.db
-models/
-./dvc
-
+.env
+output.png
+__pycache__

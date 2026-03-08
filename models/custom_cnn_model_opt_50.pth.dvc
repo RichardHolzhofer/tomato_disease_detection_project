@@ -1,0 +1,5 @@
+outs:
+- md5: 3290441c7e759638a237da33ff28ccea
+  size: 2368701
+  hash: md5
+  path: custom_cnn_model_opt_50.pth

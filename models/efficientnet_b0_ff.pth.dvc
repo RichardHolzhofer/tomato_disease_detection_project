@@ -1,0 +1,5 @@
+outs:
+- md5: 51c0ebde92c23bcfe8fb5f6f59362c24
+  size: 16388969
+  hash: md5
+  path: efficientnet_b0_ff.pth
