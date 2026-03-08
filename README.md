@@ -49,7 +49,10 @@ This project uses Python 3.12 and the [`uv`](https://github.com/astral-sh/uv) pa
 ### Option 1: Running Locally with Streamlit
 Once your environment is set up and activated:
 1. The application will automatically attempt to download the `efficientnet_b0_ff.pth` Production model from the remote DagsHub MLflow registry. 
-   * *Note:* If the MLflow connection fails, it will fall back to using local models inside the `models/` directory. Ensure you have trained the model or manually placed the weights file there.
+   * *Note:* If the MLflow connection fails, it will fall back to using local models inside the `models/` directory. You can download these models using DVC:
+     ```bash
+     uv run dvc pull
+     ```
 2. Launch the Streamlit application:
    ```bash
    streamlit run streamlit_app.py
