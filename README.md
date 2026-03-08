@@ -25,7 +25,7 @@ This project includes an extensive machine learning pipeline modeled within `dis
 
 ## 🛠️ Environment Setup
 
-This project uses Python 3.11 and the [`uv`](https://github.com/astral-sh/uv) package manager for extremely fast dependency resolutions, as defined in `pyproject.toml`.
+This project uses Python 3.12 and the [`uv`](https://github.com/astral-sh/uv) package manager for extremely fast dependency resolutions, as defined in `pyproject.toml`.
 
 ### Local Setup (Using uv)
 1. Install `uv` on your system if you haven't already:
@@ -41,7 +41,6 @@ This project uses Python 3.11 and the [`uv`](https://github.com/astral-sh/uv) pa
    * **Windows**: `.venv\Scripts\activate`
    * **Linux/Mac**: `source .venv/bin/activate`
 
-*Note: You can also use standard `pip` by running `pip install -r requirements.txt`, though `uv` is highly recommended.*
 
 ---
 
@@ -49,7 +48,8 @@ This project uses Python 3.11 and the [`uv`](https://github.com/astral-sh/uv) pa
 
 ### Option 1: Running Locally with Streamlit
 Once your environment is set up and activated:
-1. Ensure you have your `efficientnet_b0_ff.pth` model saved in the `models/` directory.
+1. The application will automatically attempt to download the `efficientnet_b0_ff.pth` Production model from the remote DagsHub MLflow registry. 
+   * *Note:* If the MLflow connection fails, it will fall back to using local models inside the `models/` directory. Ensure you have trained the model or manually placed the weights file there.
 2. Launch the Streamlit application:
    ```bash
    streamlit run streamlit_app.py
@@ -58,7 +58,7 @@ Once your environment is set up and activated:
 4. *(Optional)* To get AI-powered treatment advice, ensure your `.env` file contains `GROQ_API_KEY=your_key`.
 
 ### Option 2: Running with Docker
-The repository includes a ready-to-use Dockerfile. It uses `python:3.11-slim` and natively integrates `uv` for lightning-fast container builds.
+The repository includes a ready-to-use Dockerfile. It uses `python:3.12-slim` and natively integrates `uv` for lightning-fast container builds.
 
 1. **Build the Docker Image:**
    Make sure you are in the project root directory where the `Dockerfile` is located.
