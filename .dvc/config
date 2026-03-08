@@ -1,0 +1,3 @@
+['remote "origin"']
+    url = s3://dvc
+    endpointurl = https://dagshub.com/RichardHolzhofer/tomato_disease_detection_project.s3
