@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+
+# Jupyter Notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# DVC & Git
+.git/
+.dvc/
+!.dvcignore
+
+# Machine Learning & Tracking
+mlruns/
+mlflow.db
+artifacts/
+
+models/*.pth
+
+# OS
+.DS_Store
+Thumbs.db

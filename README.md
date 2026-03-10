@@ -1,6 +1,6 @@
 # 🌱 Tomato Leaf Disease Classifier
 
-Welcome to the Tomato Leaf Disease Classifier project! This application leverages deep learning to identify various diseases from tomato leaf images. It also integrates an LLM (Qwen-32B via Groq) to provide actionable, translated treatment recommendations depending on the diagnosed disease.
+Welcome to the Tomato Leaf Disease Classifier! This application uses deep learning to identify various diseases from images of tomato leaves. To help you take immediate action, it also integrates an AI assistant (Qwen-32B via Groq) that provides tailored, multilingual treatment recommendations based on the diagnosis.
 
 ## 🚀 Features
 * **Disease Classification**: Utilizes a fine-tuned EfficientNet-B0 model to classify images into 11 distinct classes (10 diseases + 1 Healthy).
@@ -8,6 +8,7 @@ Welcome to the Tomato Leaf Disease Classifier project! This application leverage
 * **Multilingual Support**: LLM-generated recommendations can be output in English, German, or Hungarian.
 * **Modern Interface**: Built with an interactive Streamlit frontend.
 * **Containerized**: Fully containerized using Docker for seamless deployment.
+* **Data & Model Versioning**: Uses **DVC** to manage large model weights and datasets efficiently.
 
 ## 📊 Project Overview & Methodology
 This project includes an extensive machine learning pipeline modeled within `disease_detection_notebook.ipynb`. 
@@ -20,6 +21,7 @@ This project includes an extensive machine learning pipeline modeled within `dis
    * Fine-tuning was tracked in **MLflow** and logged remotely via **DagsHub**.
    * Hyperparameter optimization was conducted with **Optuna**.
 5. **Evaluation**: Models were evaluated using accuracy, F1-macro, and F1-weighted scores, utilizing Early Stopping to prevent overfitting.
+6. **Versioning**: **DVC** is used to version large model weights and training artifacts, ensuring reproducibility without bloating the Git repository.
 
 ---
 
@@ -40,6 +42,24 @@ This project uses Python 3.12 and the [`uv`](https://github.com/astral-sh/uv) pa
 4. Activate the virtual environment:
    * **Windows**: `.venv\Scripts\activate`
    * **Linux/Mac**: `source .venv/bin/activate`
+
+### 🏗️ GPU Support (Optional)
+By default, the project runs on CPU. If you have an NVIDIA GPU and wish to use CUDA for faster training or inference, add the following to the bottom of your `pyproject.toml` and run `uv sync`:
+
+```toml
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
+torchvision = { index = "pytorch" }
+```
+Then, update your environment:
+```bash
+uv sync
+```
 
 
 ---
