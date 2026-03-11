@@ -24,3 +24,7 @@ models/*.pth
 # OS
 .DS_Store
 Thumbs.db
+
+# Video
+streamlit_demo_video.webm
+video_thumbnail.png

@@ -2,6 +2,15 @@
 
 Welcome to the Tomato Leaf Disease Classifier! This application uses deep learning to identify various diseases from images of tomato leaves. To help you take immediate action, it also integrates an AI assistant (Qwen-32B via Groq) that provides tailored, multilingual treatment recommendations based on the diagnosis.
 
+> [!TIP]
+> Don't have a leaf photo handy? Check the `example_pics/` folder for sample images of various diseases to try out!
+
+**🔗 Links**
+* **Live Demo**: [tomato-disease-detection-project.streamlit.app](https://tomato-disease-detection-project.streamlit.app/)
+* **MLOps Dashboard (DagsHub)**: [RichardHolzhofer/tomato_disease_detection_project](https://dagshub.com/RichardHolzhofer/tomato_disease_detection_project)
+* **Code Repository (GitHub)**: [RichardHolzhofer/tomato_disease_detection_project](https://github.com/RichardHolzhofer/tomato_disease_detection_project)
+
+
 ## 🚀 Features
 * **Disease Classification**: Utilizes a fine-tuned EfficientNet-B0 model to classify images into 11 distinct classes (10 diseases + 1 Healthy).
 * **AI Recommendations**: Employs Qwen-32B via the Groq API to provide treatment recommendations for detected diseases.
@@ -118,6 +127,7 @@ The repository includes a ready-to-use Dockerfile. It uses `python:3.12-slim` an
 * `disease_detection_notebook.ipynb`: Core notebook covering ETL, PyTorch dataset creation, Custom CNNs, EfficientNet fine-tuning, MLflow tracking, and Optuna tuning.
 * `streamlit_app.py`: The main Streamlit web application script.
 * `src/predict.py`: Core logic for loading the model weights and running inference.
+* `example_pics/`: Sample images organized by disease category for testing.
 * `Dockerfile`: Containerization instructions.
 * `pyproject.toml` / `uv.lock`: Project metadata and exact dependency lockdown. 
 # Conclusion

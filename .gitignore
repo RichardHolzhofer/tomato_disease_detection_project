@@ -4,3 +4,5 @@ mlflow.db
 .env
 output.png
 __pycache__
+streamlit_demo_video.webm
+video_thumbnail.png
